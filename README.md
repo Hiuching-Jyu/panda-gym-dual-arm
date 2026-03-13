@@ -1,4 +1,4 @@
-# Dual-Arm Panda Handover — Extension to panda-gym
+# Dual-Arm Panda Handover with RL using SAC — Extension to panda-gym
 
 A single-agent reinforcement learning environment for a **two-arm cube handover task**
 built on top of [panda-gym](https://github.com/qgallouedec/panda-gym) and trained with
