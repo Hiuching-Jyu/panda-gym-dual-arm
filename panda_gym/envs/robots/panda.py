@@ -24,6 +24,7 @@ class Panda(PyBulletRobot):
         block_gripper: bool = False,
         base_position: Optional[np.ndarray] = None,
         control_type: str = "ee",
+        body_name: str = "panda",
     ) -> None:
         base_position = base_position if base_position is not None else np.zeros(3)
         self.block_gripper = block_gripper
@@ -33,7 +34,7 @@ class Panda(PyBulletRobot):
         action_space = spaces.Box(-1.0, 1.0, shape=(n_action,), dtype=np.float32)
         super().__init__(
             sim,
-            body_name="panda",
+            body_name=body_name,
             file_name="franka_panda/panda.urdf",
             base_position=base_position,
             action_space=action_space,

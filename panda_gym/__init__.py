@@ -22,3 +22,11 @@ for task in ["Reach", "Slide", "Push", "PickAndPlace", "Stack", "Flip"]:
             )
 
             ENV_IDS.append(env_id)
+
+# Dual-arm handover environment
+register(
+    id="PandaDualHandover-v0",
+    entry_point="panda_gym.envs.dual_panda_env:DualPandaHandoverEnv",
+    max_episode_steps=200,
+)
+ENV_IDS.append("PandaDualHandover-v0")
